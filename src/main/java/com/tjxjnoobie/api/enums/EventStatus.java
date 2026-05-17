@@ -1,0 +1,5 @@
+package com.tjxjnoobie.api.enums;
+
+public enum EventStatus {
+    PENDING, RUNNING, SUCCESS, FAILED, CANCELLED, SUPPRESSED, RETRYING, RETRY_SUCCESS, RETRY_FAILED, RETRY_CANCELLED, FIRED
+}
