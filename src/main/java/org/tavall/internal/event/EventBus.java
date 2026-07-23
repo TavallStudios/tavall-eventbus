@@ -67,7 +67,7 @@ public class EventBus {
         if (listeners == null) return;
 
         for (ListenerWrapper wrapper : listeners) {
-            if (wrapper.eventDomain != EventDomain.GLOBAL && wrapper.eventDomain != eventDomain) {
+            if (wrapper.eventDomain == EventDomain.GLOBAL || wrapper.eventDomain != eventDomain) {
                 continue;
             }
             if (event.isCancelled()) break;
