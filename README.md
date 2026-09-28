@@ -39,8 +39,8 @@ Module Type: `LIBRARY`; Runtime Owner: `None`.
 ## Documentation
 
 | Document | Purpose |
-| [Module Progression](docs/progression/TAVALL_EVENTBUS_PROGRESSION.md) | Audited module implementation, integration, validation, and history. |
 | --- | --- |
+| [Module Progression](docs/progression/TAVALL_EVENTBUS_PROGRESSION.md) | Audited module implementation, integration, validation, and history. |
 | [Contributing](CONTRIBUTING.md) | Contribution and development notes. |
 | [Repository Git Workflow](docs/quality/GIT_WORKFLOW.md) | Applicable repository guidance. |
 
@@ -78,7 +78,7 @@ No tracked license file is present in the current repository tree.
 
 | Surface | Sync State | Location | Last Updated | Evidence |
 | --- | --- | --- | --- | --- |
-| GitHub | PRIMARY | TavallStudios/tavall-eventbus/README.md | 2026-09-27 5:32 PM PDT| PR [#10](https://github.com/TavallStudios/tavall-eventbus/pull/10) updated to route the root module Progression and record module type, PR stack, and CI-definition state. |
+| GitHub | PRIMARY | TavallStudios/tavall-eventbus/README.md | 2026-09-27 5:33 PM PDT| PR [#17](https://github.com/TavallStudios/tavall-eventbus/pull/10) updated to correct table formatting. |
 | Notion | NOT_APPLICABLE | — | 2026-09-27 12:29 PM PDT | README files are not synchronized as Notion twins. |
 
 ### Update History
@@ -87,5 +87,6 @@ No tracked license file is present in the current repository tree.
 | --- | --- | --- | --- | --- | --- | --- |
 | 2026-09-27 12:29 PM PDT | GitHub | UPDATED | TavallStudios/tavall-eventbus/README.md | Same path | https://github.com/TavallStudios/tavall-eventbus/pull/10. | Reworked the public README to describe the current project, module boundary, usage, and documentation. |
 | 2026-09-27 5:32 PM PDT | GitHub | UPDATED | TavallStudios/tavall-eventbus/README.md | Same path | PR [#10](https://github.com/TavallStudios/tavall-eventbus/pull/10) | Added the required root-module Progression route, visible module marker, classification, PR stack, and CI-definition state. |
+| 2026-09-27 5:33 PM PDT | GitHub | UPDATED | TavallStudios/tavall-eventbus/README.md | Same path | PR [#10](https://github.com/TavallStudios/tavall-eventbus/pull/10) | Corrected the Documentation table row order; preserved module routing and development details. |
 
 </details>
