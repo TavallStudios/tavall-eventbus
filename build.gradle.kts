@@ -1,3 +1,4 @@
+import org.gradle.api.tasks.Copy
 import java.util.zip.ZipFile
 
 plugins {
@@ -79,6 +80,14 @@ val verifyJarContents = tasks.register("verifyJarContents") {
 
 tasks.check {
     dependsOn(verifyJarContents)
+}
+
+tasks.register<Copy>("tavallCiArtifact") {
+    val binaryJar = tasks.named<Jar>("jar")
+    dependsOn(binaryJar)
+    from(binaryJar.flatMap { it.archiveFile })
+    into(layout.buildDirectory.dir("tavall-ci-artifacts"))
+    rename { "tavall-eventbus.jar" }
 }
 
 publishing {
