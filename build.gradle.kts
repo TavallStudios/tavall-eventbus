@@ -98,6 +98,16 @@ publishing {
         }
     }
     repositories {
+        val privateSnapshotRepository = providers.environmentVariable("TAVALL_CI_DEPENDENCY_REPOSITORY")
+            .orNull
+            ?.takeIf(String::isNotBlank)
+        if (privateSnapshotRepository != null) {
+            maven {
+                name = "TavallPrivateSnapshots"
+                url = uri(privateSnapshotRepository)
+            }
+        }
+
         val token = providers.environmentVariable("GITHUB_TOKEN")
         if (token.isPresent) {
             maven {
