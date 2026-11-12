@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TavallEventMechanicsTest {
+final class TavallEventTest {
 
     private EventRouter router;
 

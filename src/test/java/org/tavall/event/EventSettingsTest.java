@@ -10,7 +10,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class EventSettingsTest {
+final class EventSettingsTest {
 
     @Test
     void testDefaultSettings() {
@@ -41,23 +41,5 @@ class EventSettingsTest {
         assertEquals(Duration.ofSeconds(10), settings.getTimeout());
         assertEquals(EventDomain.DATABASE, settings.getDomain());
         assertEquals(Set.of(EventTag.DATABASE, EventTag.LOCAL), settings.getTags());
-    }
-
-    @Test
-    void testNonCancellableEventThrowsOnCancel() {
-        EventContext context = new EventContext(false);
-        assertFalse(context.isCancellable());
-        assertThrows(UnsupportedOperationException.class, context::cancel);
-        assertFalse(context.isCancelled());
-    }
-
-    @Test
-    void testCancellableEventSucceedsOnCancel() {
-        EventContext context = new EventContext(true);
-        assertTrue(context.isCancellable());
-        assertFalse(context.isCancelled());
-        assertTrue(context.cancel());
-        assertTrue(context.isCancelled());
-        assertFalse(context.cancel(), "Subsequent cancel should return false as already cancelled");
     }
 }

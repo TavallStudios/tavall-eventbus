@@ -10,7 +10,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class EventRouterLifecycleTest {
+final class EventRouterSimulationTest {
 
     private EventRouter router;
 
