@@ -12,16 +12,10 @@ build:
 resources:
   mode: SYSTEM
 
-artifacts:
-  - name: tavall-eventbus
-    path: build/libs/tavall-eventbus-*.jar
-    channel: SNAPSHOT
-
 requiredChecks:
   - compilation
   - unit-tests
   - quality
-  - artifact
 
 checks:
   compilation:
@@ -36,7 +30,3 @@ checks:
     executor: gradle
     tasks:
       - check
-  artifact:
-    executor: gradle
-    tasks:
-      - jar
