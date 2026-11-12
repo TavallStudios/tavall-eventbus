@@ -15,6 +15,7 @@ resources:
 artifacts:
   - name: tavall-eventbus
     path: build/libs/tavall-eventbus-*.jar
+    channel: SNAPSHOT
 
 requiredChecks:
   - compilation
